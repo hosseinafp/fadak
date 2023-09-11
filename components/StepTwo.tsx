@@ -3,7 +3,6 @@ import Items from './Items';
 import { ArrowRight } from 'react-bootstrap-icons';
 import { items2 } from './data';
 
-// Define types for your props
 interface StepTwoProps {
   values: {
     userName: string,
@@ -20,14 +19,13 @@ interface StepTwoProps {
     password?: boolean,
     confirmPassword?: boolean,
   };
-  isSubmitting: boolean;
   setCurrentStep: (step: number) => void;
 }
 
-const StepTwo: React.FC<StepTwoProps> = ({values, errors, isSubmitting, setCurrentStep, touched}) => {
+const StepTwo: React.FC<StepTwoProps> = ({values, errors, setCurrentStep, touched}) => {
     return (
-        <div className="d-flex justify-content-center h-100">
-            <div className="d-flex align-items-center">
+        <div className="d-flex justify-content-center">
+            <div className="position-absolute top-50 start-50 translate-middle">
                 <div className="card" style={{width: '18rem'}}>
                     <div className="">
                         <ArrowRight 

@@ -22,9 +22,9 @@ const Register: React.FC = () => {
   const mutation = useMutation((data: FormValues) => axios.post('http://localhost:5000/users', data));
 
   return (
-    <div className="h-100">
+    <div className="">
       <Formik
-        className='h-100'
+        className=''
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values: FormValues) => {
@@ -36,7 +36,7 @@ const Register: React.FC = () => {
         }}
       >
         {({ isSubmitting, setFieldValue, values, errors, touched }: FormikProps<FormValues>) => (
-          <Form className='h-100'>
+          <Form className=''>
             {
               currentStep === 1 ? (
                   <StepOne {...{values, errors, setFieldValue, isSubmitting, setCurrentStep, touched}} />

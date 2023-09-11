@@ -39,8 +39,8 @@ const StepOne: React.FC<StepOneProps> = ({values, errors, setFieldValue, isSubmi
                     }
                 }}
                 />
-            <div className="d-flex justify-content-center h-100">
-                <div className="d-flex align-items-center">
+            <div className="d-flex justify-content-center">
+                <div className="position-absolute top-50 start-50 translate-middle">
                     <div className="card" style={{width: '18rem'}}> 
                         <Photo values={values} setFieldValue={setFieldValue} touched={touched} errors={errors} />
                         <div className="card-body">    
